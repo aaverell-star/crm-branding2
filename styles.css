@@ -1,0 +1,142 @@
+/* Base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #111;
+  background-color: #fff;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.logo img { display: block; }
+
+/* Nav */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: #1D418E;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.nav a:hover,
+.nav a:focus {
+  background-color: #93C2F8; /* Spelman Light Blue */
+  outline: none;
+}
+
+/* Hamburger button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 6px;
+}
+
+.menu-toggle span {
+  background-color: #1D418E;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  border-radius: 2px;
+  display: block;
+}
+
+/* Brand rule under header */
+.brand-rule {
+  border: 0;
+  height: 8px;
+  background-color: #93C2F8;
+  margin: 0;
+}
+
+/* Content placeholder */
+.page-content {
+  padding: 16px 20px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #1D418E; /* Spelman Blue */
+  color: #FFFFFF;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left img {
+  display: block;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-right a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.footer-right a:hover,
+.footer-right a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* Header nav collapses */
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,.06);
+  }
+  .nav.active { display: flex; }
+
+  .menu-toggle { display: flex; }
+
+  /* Footer stacking */
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .footer-right {
+    justify-content: center;
+    margin-top: 4px;
+  }
+}
